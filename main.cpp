@@ -10,13 +10,26 @@ int main()
 
 	DoublyLinkedList dl;
 	
-	// inserting 100 strings to the singly list
+	// inserting 100 strings to the doubly list front
 	for(i=0; i<100; i++)
 	{
 		sstr << i;
 		sstr >>tempBuff;
 		tempStr = "String no:" + tempBuff;
-		dl.insertData(tempStr);
+		dl.insertDataFront(tempStr);
+		sstr.clear();
+		tempStr = "";
+		tempBuff = "";
+	}
+
+
+	// inserting 5 strings to the doubly list back
+	for(i=0; i<5; i++)
+	{
+		sstr << i*5+999;
+		sstr >>tempBuff;
+		tempStr = "String no:" + tempBuff;
+		dl.insertDataBack(tempStr);
 		sstr.clear();
 		tempStr = "";
 		tempBuff = "";

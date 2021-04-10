@@ -1,6 +1,6 @@
 #include "DoublyLinkedList.h"
 
-void DoublyLinkedList :: insertData(string buffer)
+void DoublyLinkedList :: insertDataFront(string buffer)
 {
 	struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
 	newNode->data = buffer;
@@ -18,6 +18,22 @@ void DoublyLinkedList :: insertData(string buffer)
 
 	head = newNode;
 }
+
+void DoublyLinkedList :: insertDataBack(string buffer)
+{
+	struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+	newNode->data = buffer;
+	newNode->next = NULL;
+	newNode->previous = tail;
+
+	if(tail != NULL)
+	{
+		tail->next = newNode;
+	}
+
+	tail = newNode;
+}
+
 
 void DoublyLinkedList :: displayDataReverse()
 {

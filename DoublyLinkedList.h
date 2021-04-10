@@ -20,7 +20,8 @@ public:
 
 	DoublyLinkedList() {}
 	~DoublyLinkedList() {}
-	void insertData(string);
+	void insertDataFront(string);
+	void insertDataBack(string);
 	void displayDataReverse();
 	void displayDataForward();
 };
