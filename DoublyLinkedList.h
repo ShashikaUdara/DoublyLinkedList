@@ -24,6 +24,8 @@ public:
 	void insertDataBack(string);
 	void displayDataReverse();
 	void displayDataForward();
+	void deleteFromFront();
+	void deleteFromBack();
 };
 
 #endif

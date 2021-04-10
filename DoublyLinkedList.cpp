@@ -2,6 +2,7 @@
 
 void DoublyLinkedList :: insertDataFront(string buffer)
 {
+	cout<<"DoublyLinkedList :: insertDataFront(string buffer)"<<endl;
 	struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
 	newNode->data = buffer;
 	newNode->next = head;
@@ -21,6 +22,7 @@ void DoublyLinkedList :: insertDataFront(string buffer)
 
 void DoublyLinkedList :: insertDataBack(string buffer)
 {
+	cout<<"DoublyLinkedList :: insertDataBack(string buffer)"<<endl;
 	struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
 	newNode->data = buffer;
 	newNode->next = NULL;
@@ -59,4 +61,22 @@ void DoublyLinkedList :: displayDataForward()
 		cout<<dForwardNode->data<<endl;
 		dForwardNode = dForwardNode->previous;
 	}
+}
+
+void DoublyLinkedList :: deleteFromFront()
+{
+	cout<<"DoublyLinkedList :: deleteFromFront()"<<endl;
+	cout<<"previous head node:"<<head->data<<endl;
+	head = head->next;
+	head->previous = NULL;
+	cout<<"new head node:"<<head->data<<endl;
+}
+
+void DoublyLinkedList :: deleteFromBack()
+{
+	cout<<"DoublyLinkedList :: deleteFromBack()"<<endl;
+	cout<<"previous tail node:"<<tail->data<<endl;
+	tail = tail->previous;
+	tail->next = NULL;
+	cout<<"new tail node:"<<tail->data<<endl;
 }
